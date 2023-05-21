@@ -1,0 +1,68 @@
+
+<div class="row">
+    <h1>Experiencia Laboral</h1>
+<div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+Nueva Experiencia
+    </button>
+</div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        
+      
+      <table class="table">
+            <tbody>
+              <tr *ngFor="let Experiencia of expe">
+                <td><h2>{{Experiencia.nombreE}}</h2></td>
+                <td>{{Experiencia.descripcionE}}</td>
+                <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
+                  <i class="bi bi-pencil-square"></i>EDITAR</button></td>
+                  
+                  <td *ngIf="isLogged"><button class="btn btn-danger"(click)="delete(Experiencia.id)">
+                    <i class="bi bi-pencil-square"></i>BORRAR</button></td>
+                
+                </tr>
+            </tbody>
+          </table>
+
+          
+                <h3>Asesor bancario</h3>
+                <h4>Banco Colpatria Colombia</h4>
+                <p class="date">Enero 2003 - Diciembre 2006</p>
+                <ul>
+                  <li>Elaboraba y gestionaba productos financieros mediante el uso de sistemas especializados, 
+                    asegurando la correcta implementación de los mismos y garantizando el cumplimiento de los estándares
+                     y regulaciones establecidos en el mercado financiero.</li>
+                  
+                </ul>
+              </div>
+              <div class="job">
+                <h3>Asesor comercial OnCelular</h3>
+                <h4>Empresa Oncelular venta y reparación de equipos</h4>
+                <p class="date">Mayo 2012 - Diciembre 2015</p>
+                <ul>
+                  <li>Interacción con los clientes para entender sus necesidades y ofrecer recomendaciones personalizadas de productos y servicios.</li>
+                  <li>Coordinación con el equipo técnico para garantizar un servicio rápido y eficiente.</li>
+                  <li>Implementación de soluciones de comercio electrónico.</li>
+                </ul>
+              </div>
+              <div class="job">
+                <h3>Propietario El Ojo de Thundera</h3>
+                <h4>El Ojo de Thundera comics y figuras de colección</h4>
+                <p class="date">Enero 2016 - Actualidad</p>
+                <ul>
+                  <li>Desarrollo de estrategias para venta online y presencial.</li>
+                  <li>Creación y mantenimiento de bases de datos de clientes.</li>
+                  <li>administración y mantenimiento de plataformas de venta online.</li>
+                </ul>
+              </div>
+            
+    </div>
+    
+  
+ 
+               
+
+    
+   

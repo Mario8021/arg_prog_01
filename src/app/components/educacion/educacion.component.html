@@ -1,0 +1,46 @@
+
+<div class="row">
+    <h1>Educacion</h1>
+<div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+Nueva educacion
+    </button>
+</div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        
+      
+      <table class="table">
+            <tbody>
+              <tr *ngFor="let Educacion of educacion">
+                <td><h2>{{Educacion.nombreE}}</h2></td>
+                <td>{{Educacion.descripcionE}}</td>
+                <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}">
+                  <i class="bi bi-pencil-square"></i>EDITAR</button></td>
+                  
+                  <td *ngIf="isLogged"><button class="btn btn-danger"(click)="delete(Educacion.id)">
+                    <i class="bi bi-pencil-square"></i>BORRAR</button></td>
+                
+                </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+        <ul>
+    <li>
+    <h2>Estudiante de Psicología</h2><strong>Universidad de San buenaventura Bogotá Colombia. (Enero 2002 - Diciembre 2003)</strong><p> Estudie 4 semestres de psicología en la universidad de San Buenaventura, la orientación de la carrera es humanista enfocada en el método científico. Siempre me han interesado las razones subyacentes que impulsan la conducta humana.
+    <li>
+    <h2>Estudiante de Publicidad</h2> <strong>Universidad Central Bogotá Colombia
+        (Enero 2004 - Junio 2006)</strong><p> Estudie tres semestres de publicidad en la Universidad Central. En los primeros semestres, tuve la oportunidad de conocer los fundamentos de la publicidad, aprendiendo los conceptos básicos de la comunicación, la psicología del consumidor, y la investigación de mercado.</p>
+    </li>
+    <li>
+    <h2> Argentina Programa</h2> <strong>Desarrollador web full stack Junior
+        Marzo 2022 - Actualidad</strong> <p> El Plan Argentina Programa es una iniciativa del Gobierno de la República Argentina que busca capacitar a jóvenes y adultos en habilidades digitales y tecnológicas, para que puedan acceder a mejores oportunidades laborales y emprendimientos en un mundo cada vez más digitalizado.</p>
+    </li>
+</ul>
+    </div>
+</div>
