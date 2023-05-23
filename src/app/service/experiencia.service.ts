@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL = ' https://back-endmario.herokuapp.com/explab/';
+  expURL = ' https://arg-prog-mario8021.koyeb.app/explab/';
 
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<Experiencia[]> {

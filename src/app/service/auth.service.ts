@@ -10,7 +10,7 @@ import {NuevoUsuario} from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = ' https://back-endmario.herokuapp.com/auth/';
+  authURL = ' https://arg-prog-mario8021.koyeb.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
   public nuevo(nuevoUsuario: NuevoUsuario):  Observable <any>{
